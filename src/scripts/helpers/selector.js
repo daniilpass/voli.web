@@ -1,4 +1,4 @@
-function $(query) {
+export default function $(query) {
     if (typeof query != 'string' || query.length === 0)
         return null;
 

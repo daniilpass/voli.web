@@ -13,6 +13,7 @@ export default function beamFactory (parent, imgUrl, imgWidth, imgHeight) {
         image.style.left = fromX + 'px';
         image.style.top = fromY + 'px';        
         image.style.transition = `height ${animationTime}ms`;
+        image.style.borderRadius = `${imgWidth}px`;
 
         //calculate angle and distance
         let deltaX = toX - fromX;

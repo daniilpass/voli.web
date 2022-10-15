@@ -1,5 +1,23 @@
 body {
+    margin: 0;
+    padding: 0;
     background: #f7f7f8;
     width: 100vw;
     height: 100vh;
 }
+
+.header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header__logo {
+    width: 128px;
+    height: 128px;
+}
+
+.header__title {
+    margin: -11px 0 0 -20px;
+}
+
