@@ -6,7 +6,6 @@ const fireContainer = $("#fire-container");
 const voliInstance = voli(voliContainer, fireContainer);
 
 function handleBodyClick(event) {
-    console.log(event)
     voliInstance.fire(event.pageX, event.pageY);
 }
 
