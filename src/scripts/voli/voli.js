@@ -12,16 +12,21 @@ export default function voli(voliContainer, fireContainer) {
 
     //eyes
     const leftEyeOffset = {
-        x: 30,
-        y: 65
+        x: 40,
+        y: 75
     };
     const rightEyeOffset = {
-        x: 55,
-        y: 55
+        x: 65,
+        y: 65
     };
 
     function fire(toX, toY, onAnimationEnd) {        
-        const rec = voliContainer.getBoundingClientRect();                
+        const rec = voliContainer.getBoundingClientRect();   
+        const fromX = rec.x;   
+        const fromY = rec.y + window.scrollY;
+
+        console.log(rec.x, rec.y , rec)   
+
         const makeExplode =  () => {
             explodeMaker.make(
                 toX, 
@@ -33,8 +38,8 @@ export default function voli(voliContainer, fireContainer) {
 
         //Left eye beam
         beamMaker.make(
-            rec.x + leftEyeOffset.x,
-            rec.y + leftEyeOffset.y, 
+            fromX + leftEyeOffset.x,
+            fromY + leftEyeOffset.y, 
             toX, 
             toY, 
             beamAnimationTime, 
@@ -43,8 +48,8 @@ export default function voli(voliContainer, fireContainer) {
     
         //Right eye beam with explode
         beamMaker.make(
-            rec.x + rightEyeOffset.x,
-            rec.y + rightEyeOffset.y, 
+            fromX + rightEyeOffset.x,
+            fromY + rightEyeOffset.y, 
             toX, 
             toY, 
             beamAnimationTime, 
