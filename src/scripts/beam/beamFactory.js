@@ -10,8 +10,8 @@ export default function beamFactory (parent, imgUrl, imgWidth, imgHeight) {
 
         //start styles
         image.style.position = 'absolute';
-        image.style.left = fromX + 'px';
-        image.style.top = fromY + 'px';        
+        image.style.left = fromX - imgWidth/2 + 'px';
+        image.style.top = fromY - imgHeight/2 + 'px';        
         image.style.transition = `height ${animationTime}ms`;
         image.style.borderRadius = `${imgWidth}px`;
 

@@ -12,12 +12,12 @@ export default function voli(voliContainer, fireContainer) {
 
     //eyes
     const leftEyeOffset = {
-        x: 25,
-        y: 60
+        x: 30,
+        y: 65
     };
     const rightEyeOffset = {
-        x: 50,
-        y: 50
+        x: 55,
+        y: 55
     };
 
     function fire(toX, toY, onAnimationEnd) {        
