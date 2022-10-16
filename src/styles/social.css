@@ -12,11 +12,17 @@
     text-decoration: none;
 }
 
+.link__image-container{
+    background: orange;
+    padding: 8px;
+    width: 24px;
+    height: 24px;
+}
+
 .link__image {
     width: 24px;
     height: 24px;
-    padding: 8px;    
-    background: orange;
+    filter: grayscale(1);
 }
 
 .link__text {
@@ -33,4 +39,8 @@
     background: linear-gradient(90deg, orange, 100%, transparent);
     color: #f7f7f8;
     text-shadow: none;
+}
+
+.social__link:hover .link__image {
+    filter: none;
 }

@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: KTFJerimov;
     color: #f7f7f8;
     overflow-x: hidden;
     min-height: 100vh;
@@ -9,6 +10,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    user-select: none;
 }
 
 section {

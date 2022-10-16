@@ -4,7 +4,7 @@ import beamFactory from '../beam/index.js';
 export default function voli(voliContainer, fireContainer) {
     //explode
     const explodeMaker = explodeFactory(fireContainer, './src/assets/anim/explode.gif', 50, 50);
-    const explodeAnimationTime = 200;
+    const explodeAnimationTime = 400;
 
     //beam 
     const beamMaker = beamFactory(fireContainer, './src/assets/anim/beam.gif', 10, 10);
