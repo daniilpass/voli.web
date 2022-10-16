@@ -4,7 +4,7 @@ export default function beamFactory (parent, imgUrl, imgWidth, imgHeight) {
         const image = document.createElement('img');
 
         //attributes
-        image.setAttribute('src', imgUrl);
+        image.setAttribute('src', `${imgUrl}?dn=${Date.now()}`);
         image.setAttribute('height', imgHeight);
         image.setAttribute('width', imgWidth);
 
