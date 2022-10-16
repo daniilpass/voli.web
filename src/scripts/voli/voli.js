@@ -25,8 +25,6 @@ export default function voli(voliContainer, fireContainer) {
         const fromX = rec.x;   
         const fromY = rec.y + window.scrollY;
 
-        console.log(rec.x, rec.y , rec)   
-
         const makeExplode =  () => {
             explodeMaker.make(
                 toX, 

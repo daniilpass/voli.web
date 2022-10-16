@@ -1,0 +1,9 @@
+.created-by {
+    text-align: center;
+    text-shadow: #000 1px 0 10px;
+}
+
+.created-by a {
+    color: orange;
+    text-decoration: none;    
+}

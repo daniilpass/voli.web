@@ -10,3 +10,11 @@ body {
     background-size: cover;
     background-attachment: fixed;
 }
+
+section {
+    padding-bottom: 24px;
+}
+
+section:first-of-type {
+    padding-top: 24px;
+}

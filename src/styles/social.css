@@ -1,0 +1,36 @@
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.social__link {
+    color: #f7f7f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.link__image {
+    width: 24px;
+    height: 24px;
+    padding: 8px;    
+    background: orange;
+}
+
+.link__text {
+    padding: 8px;
+    font-weight: bold;
+    font-size: 27pt;
+    line-height: 24px;
+    color: orange;
+    text-shadow: #000 1px 0 10px;
+    background: linear-gradient(90deg, orange, 0%, transparent);
+}
+
+.social__link:hover .link__text {
+    background: linear-gradient(90deg, orange, 100%, transparent);
+    color: #f7f7f8;
+    text-shadow: none;
+}
