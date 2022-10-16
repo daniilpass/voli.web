@@ -1,0 +1,9 @@
+.page {
+    width: 900px;
+    background-image: url("/src/assets/images/metal.jpg");
+    background-size: 200%;
+    margin: 0 auto;
+    min-height: 100vh;
+    border-left: solid 16px orange;
+    border-right: solid 16px orange;
+}

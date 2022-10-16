@@ -1,0 +1,39 @@
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+
+.header__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* gap: 48px;*/
+    padding: 24px 48px;
+    background: #141414;
+}
+
+.header__footer {
+    height: 50px;
+    background: linear-gradient(180deg, #141414, 80%, transparent);
+}
+
+.header__logo {
+    width: 128px;
+    height: 128px;
+    background-color: orange;
+    border: double 12px orange;
+    border-radius: 50%;
+    background-clip: content-box;
+}
+
+.header__title {
+    margin: 0;
+    font-size: 54pt;
+}
+
+.header__subtitle {
+    margin: 0;
+    font-size: 17pt;
+    color: orange;
+}

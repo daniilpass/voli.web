@@ -1,0 +1,26 @@
+.header-borders {
+    position: relative;
+}
+
+.header-border {
+    width: 500px;
+    height: 500px;
+    bottom: -200px;
+    background: #141414;
+    position: absolute;
+    z-index: 1;
+}
+.header-border--left {
+    left: 0px;
+    border-left: 16px solid orange;
+    transform: rotate(-45deg);
+    transform-origin: bottom left;
+    background-clip: content-box;
+}
+.header-border--right {
+    right: 0px;
+    border-right: 16px solid orange;
+    transform: rotate(45deg);
+    transform-origin: bottom right;
+    background-clip: content-box;
+}

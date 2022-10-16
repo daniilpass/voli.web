@@ -1,27 +1,41 @@
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" href="./src/styles/main.css" />
+    <link rel="stylesheet" href="./src/styles/header-borders.css" />
+    <link rel="stylesheet" href="./src/styles/header.css" />
+    <link rel="stylesheet" href="./src/styles/page.css" />
     <!--<script src="./src/scripts/helpers/selector.js"></script>-->
     <script src="./src/scripts/main.js" type="module" defer></script>
 </head>
 <body id="fire-container">
-    <header class="header">
-        <img class="header__logo" id="voli-container" src="./src/assets/images/logo.png" />
-        <h1 class="header__title" >Voli channel</h1>
-    </header>
+    <div class="page">        
+        <div class="header-borders">
+            <div class="header-border header-border--left"></div>
+            <div class="header-border header-border--right"></div>  
+        </div>
 
-    <section>
-        <a 
-            href="https://www.twitch.tv/voli_channel" 
-            target="_blank"
-            style="position: absolute; left:50%; top:50%"
-        >
-            TWITCH
-        </a>
-    </section>
+        <header class="header">            
+            <div class="header__content">
+                <img class="header__logo" id="voli-container" src="./src/assets/images/logo.png" />
+                <div class="header__text">
+                    <h1 class="header__title">VOLI CHANNEL</h1>
+                    <h2 class="header__subtitle">Cмотрим, общаемся, не напрягаемся и расслабляемся</h2>
+                </div>
+            </div>
+            <div class="header__footer"></div>
+        </header>
 
-    <footer>
-
-    </footer>
+        <section style="min-height: 2000px">
+            <a 
+                href="https://www.twitch.tv/voli_channel" 
+                target="_blank"
+            >
+                TWITCH
+            </a>
+        </section>
     
+        <footer>
+    
+        </footer>
+    </div>    
 </body>
