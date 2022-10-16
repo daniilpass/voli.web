@@ -4,7 +4,7 @@ import beamFactory from '../beam/index.js';
 export default function voli(voliContainer, fireContainer) {
     //explode
     const explodeMaker = explodeFactory(fireContainer, './src/assets/anim/explode.gif', 50, 50);
-    const explodeAnimationTime = 500;
+    const explodeAnimationTime = 200;
 
     //beam 
     const beamMaker = beamFactory(fireContainer, './src/assets/anim/beam.gif', 10, 10);
@@ -20,9 +20,18 @@ export default function voli(voliContainer, fireContainer) {
         y: 50
     };
 
-    function fire(toX, toY) {        
-        const rec = voliContainer.getBoundingClientRect();        
-    
+    function fire(toX, toY, onAnimationEnd) {        
+        const rec = voliContainer.getBoundingClientRect();                
+        const makeExplode =  () => {
+            explodeMaker.make(
+                toX, 
+                toY, 
+                explodeAnimationTime,
+                onAnimationEnd
+            );
+        }
+
+        //Left eye beam
         beamMaker.make(
             rec.x + leftEyeOffset.x,
             rec.y + leftEyeOffset.y, 
@@ -32,6 +41,7 @@ export default function voli(voliContainer, fireContainer) {
             beamAnimationTime
         );
     
+        //Right eye beam with explode
         beamMaker.make(
             rec.x + rightEyeOffset.x,
             rec.y + rightEyeOffset.y, 
@@ -39,13 +49,7 @@ export default function voli(voliContainer, fireContainer) {
             toY, 
             beamAnimationTime, 
             beamAnimationTime,
-            () => {
-                explodeMaker.make(
-                    toX, 
-                    toY, 
-                    explodeAnimationTime
-                );
-            }
+            makeExplode
         );
     }
 

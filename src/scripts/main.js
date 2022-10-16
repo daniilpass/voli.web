@@ -1,13 +1,25 @@
-import $ from './helpers/selector.js';
-import voli from './voli/voli.js';
+import {
+    $, 
+    trustedEvent
+} from './helpers/index.js';
+import voli from './voli/index.js';
 
+//instance of voli
 const voliContainer = $("#voli-container");
 const fireContainer = $("#fire-container");
 const voliInstance = voli(voliContainer, fireContainer);
 
-function handleBodyClick(event) {
-    voliInstance.fire(event.pageX, event.pageY);
+//events handlers
+const handleFire = function (e) {
+    voliInstance.fire(
+        e.pageX, 
+        e.pageY, 
+        () => {
+            e.target.click();
+        }
+    );
 }
+const handleBodyClick = trustedEvent(handleFire);
 
 //add events
-document.body.addEventListener('click', handleBodyClick);
+document.body.addEventListener('click', handleBodyClick, true);

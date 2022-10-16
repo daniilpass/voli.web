@@ -1,5 +1,5 @@
 export default function explodeFactory (parent, imgUrl, imgWidth, imgHeight) {
-    function make(posX, posY, lifespan) {
+    function make(posX, posY, lifespan, onremove) {
         const image = document.createElement('img');
         image.setAttribute('src', imgUrl);
         image.setAttribute('height', imgHeight);
@@ -11,6 +11,7 @@ export default function explodeFactory (parent, imgUrl, imgWidth, imgHeight) {
         if (lifespan) {
             setTimeout(function () {
                     image.remove();
+                    onremove && onremove();
                 }, 
                 lifespan
             );
