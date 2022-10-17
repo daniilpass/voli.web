@@ -7,20 +7,21 @@
     height: 500px;
     bottom: -200px;
     background: #141414;
+    background-clip: content-box;
     position: absolute;
     z-index: 1;
 }
 .header-border--left {
-    left: 0px;
-    border-left: 16px solid orange;
+    left: -13px;
+    border-left: 19px solid orange;
     transform: rotate(-45deg);
     transform-origin: bottom left;
-    background-clip: content-box;
+    box-shadow: -2px -9px 8px 0px black;
 }
 .header-border--right {
-    right: 0px;
-    border-right: 16px solid orange;
+    right: -13px;
+    border-right: 19px solid orange;
     transform: rotate(45deg);
     transform-origin: bottom right;
-    background-clip: content-box;
+    box-shadow: 2px -9px 8px 0px black;
 }
