@@ -5,9 +5,7 @@ import {
 import voli from './voli/index.js';
 
 //instance of voli
-const voliContainer = $("#voli-container");
-const fireContainer = $("#fire-container");
-const voliInstance = voli(voliContainer, fireContainer);
+const voliInstance = voli($("#voli-container"), $("#fire-container"));
 
 //events handlers
 const handleFire = function (e) {
