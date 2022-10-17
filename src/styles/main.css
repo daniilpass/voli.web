@@ -14,9 +14,9 @@ body {
 }
 
 section {
-    padding-bottom: 24px;
+    padding-bottom: 48px;
 }
 
 section:first-of-type {
-    padding-top: 24px;
+    padding-top: 48px;
 }
