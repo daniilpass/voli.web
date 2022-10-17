@@ -22,7 +22,7 @@ export default function voli(voliContainer, fireContainer) {
 
     function fire(toX, toY, onAnimationEnd) {        
         const rec = voliContainer.getBoundingClientRect();   
-        const fromX = rec.x;   
+        const fromX = rec.x + window.scrollX;   
         const fromY = rec.y + window.scrollY;
 
         const makeExplode =  () => {
