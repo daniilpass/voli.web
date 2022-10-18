@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="./src/styles/social.css" />
     <link rel="stylesheet" href="./src/styles/createdby.css" />    
     <script src="./src/scripts/main.js" type="module" defer></script>
-    <script src="./src/scripts/destroy/index.js" type="module"></script>
     <script src="./src/scripts/twitch.js" type="module" defer></script>
     <script src="https://embed.twitch.tv/embed/v1.js"></script>    
 </head>
@@ -29,14 +28,14 @@
                 <img class="header__logo" id="voli-container" src="./src/assets/images/logo.png" />
                 <div class="header__text">
                     <h1 class="header__title">
-                        <span onclick="destroyTarget(this)">VOLI</span>
-                        <span onclick="destroyTarget(this)">CHANNEL</span>
+                        <span data-destroy="true">VOLI</span>
+                        <span data-destroy="true">CHANNEL</span>
                     </h1>
                     <h2 class="header__subtitle">
-                        <span onclick="destroyTarget(this)">Cмотрим, </span>
-                        <span onclick="destroyTarget(this)">общаемся </span>
-                        <span onclick="destroyTarget(this)">и </span>
-                        <span onclick="destroyTarget(this)">расслабляемся</span>
+                        <span data-destroy="true">Cмотрим, </span>
+                        <span data-destroy="true">общаемся </span>
+                        <span data-destroy="true">и </span>
+                        <span data-destroy="true">расслабляемся</span>
                     </h2>
                 </div>
             </div>

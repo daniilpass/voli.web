@@ -1,4 +1,4 @@
-window.destroyTarget = function(element) {
+export default function destroyTarget(element) {
     
     const rec = element.getBoundingClientRect();
     element.style.transition = 'bottom 2s, transform 2s';

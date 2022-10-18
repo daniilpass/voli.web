@@ -20,7 +20,7 @@ export default function voli(voliContainer, fireContainer) {
         y: 65
     };
 
-    function fire(toX, toY, onAnimationEnd) {        
+    function fire(toX, toY, onBeamAnimationEnd, onExplodeAnimationEnd) {        
         const rec = voliContainer.getBoundingClientRect();   
         const fromX = rec.x + window.scrollX;   
         const fromY = rec.y + window.scrollY;
@@ -30,7 +30,7 @@ export default function voli(voliContainer, fireContainer) {
                 toX, 
                 toY, 
                 explodeAnimationTime,
-                onAnimationEnd
+                onExplodeAnimationEnd
             );
         }
 
@@ -41,7 +41,8 @@ export default function voli(voliContainer, fireContainer) {
             toX, 
             toY, 
             beamAnimationTime, 
-            beamAnimationTime
+            beamAnimationTime,
+            onBeamAnimationEnd
         );
     
         //Right eye beam with explode
