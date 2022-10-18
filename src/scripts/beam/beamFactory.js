@@ -1,10 +1,20 @@
+
+import { fetchBase64 } from "../helpers/index.js";
+
 export default function beamFactory (parent, imgUrl, imgWidth, imgHeight) {
+    let imageBase64;    
+    fetchBase64(imgUrl)
+        .then((result) => { imageBase64 = result});
+
     function make(fromX, fromY, toX, toY, animationTime, lifespan, onremove) {
+        if (!imageBase64)
+            return;
+
         //img object
         const image = document.createElement('img');
 
         //attributes
-        image.setAttribute('src', `${imgUrl}?dn=${Date.now()}`);
+        image.setAttribute('src', imageBase64);
         image.setAttribute('height', imgHeight);
         image.setAttribute('width', imgWidth);
 

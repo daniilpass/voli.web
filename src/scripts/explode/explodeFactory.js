@@ -1,8 +1,17 @@
+import { fetchBase64 } from "../helpers/index.js";
+
 export default function explodeFactory (parent, imgUrl, imgWidth, imgHeight) {
+    let imageBase64;    
+    fetchBase64(imgUrl)
+        .then((result) => { imageBase64 = result});
+
     function make(posX, posY, lifespan, onremove) {
+        if (!imageBase64)
+            return;
+            
         const image = document.createElement('img');
         
-        image.setAttribute('src', `${imgUrl}?dn=${Date.now()}`);
+        image.setAttribute('src', imageBase64);
         image.setAttribute('height', imgHeight);
         image.setAttribute('width', imgWidth);
 
