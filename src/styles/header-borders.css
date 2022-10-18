@@ -1,3 +1,8 @@
+@media screen and (max-width: 750px) {
+    .header-borders {
+        display: none;
+    }
+}
 .header-borders {
     position: relative;
 }

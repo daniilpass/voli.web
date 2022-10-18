@@ -1,8 +1,10 @@
 .twitch{
-    display: flex;
-    justify-content: center;
+    height: 480px;
+    margin: 0 24px;
 }
 
 #twitch-embed {
     box-shadow: 0px 0px 8px 0px black;
+    height: 100%;
+    width: 100%;
 }

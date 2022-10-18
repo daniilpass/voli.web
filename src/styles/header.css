@@ -1,3 +1,9 @@
+@media screen and (max-width: 750px) {
+    .header  {
+        position: relative !important;
+    }
+  }
+
 .header {
     position: sticky;
     top: 0;
@@ -6,6 +12,7 @@
 
 .header__content {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 24px;
@@ -27,16 +34,22 @@
     background-clip: content-box;
 }
 
+.header__text {
+    text-align: center;
+    /* white-space: nowrap; */
+}
+
 .header__title {
     margin: 0;
     font-size: 54pt;
-    margin-top: -24px;
+    line-height: 54pt;
+    margin-top: -12px;
 }
 
 .header__subtitle {
     margin: 0;
     font-size: 17pt;
     color: orange;
-    margin-top: -24px;
+    margin-top: -12px;
     margin-left: 12px;
 }
